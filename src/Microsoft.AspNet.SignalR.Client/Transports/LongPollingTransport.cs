@@ -69,6 +69,8 @@ namespace Microsoft.AspNet.SignalR.Client.Transports
             // Add additional actions to each of the PollingRequestHandler events
             PollingSetup(connection, data, disconnectToken, requestHandler, negotiateInitializer.Complete);
 
+            connection.Trace(TraceLevels.Events, "LP Poll: {0}", requestHandler.ResolveUrl());
+
             requestHandler.Start();
         }
 
