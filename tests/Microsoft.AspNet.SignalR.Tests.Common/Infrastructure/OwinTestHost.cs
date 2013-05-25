@@ -23,7 +23,12 @@ namespace Microsoft.AspNet.SignalR.Tests.Common.Infrastructure
             }
         }
 
-        public override void Initialize(int? keepAlive = -1, int? connectionTimeout = 110, int? disconnectTimeout = 30, bool enableAutoRejoiningGroups = false)
+        public override void Initialize(int? keepAlive = -1,
+                                        int? connectionTimeout = 110,
+                                        int? disconnectTimeout = 30,
+                                        bool enableAutoRejoiningGroups = false,
+                                       MessageBusType type = MessageBusType.Default,
+                                       int streams = 1)
         {
             base.Initialize(keepAlive, connectionTimeout, disconnectTimeout, enableAutoRejoiningGroups);
 
